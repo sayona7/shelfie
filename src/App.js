@@ -7,15 +7,42 @@ import Header from "./Components/Header/Header";
 import Product from "./Components/Product/Product";
 
 class App extends Component {
-  state = {  }
+  constructor(props) {
+    super(props);
+
+  this.state = { 
+    inventoryList: [
+      {
+        name: "Shoes",
+        price: 49.99,
+        image: "some img"
+      },
+       {
+        name: "Scarf",
+        price: 29.99,
+        image: "some img"
+      }
+    ]
+   }
+  }
+
+  componentDidMount() {
+
+  }
+
+  getList() {
+    
+  }
+
   render() { 
     return ( 
       <div>
         <Header />
-        <Dashboard>
-          <Product />
-        </Dashboard>
-        <Form />
+        <div>
+          <Form />
+          <Dashboard 
+          inventoryList={this.state.inventoryList} />
+        </div>
       </div>
      );
   }

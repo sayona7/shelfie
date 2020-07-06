@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
+import Product from '../Product/Product';
 
 class Dashboard extends Component {
-    state = {  }
+    constructor(props) {
+        super(props);
+        this.state = { 
+
+         }
+    }
+    
+
+
+
     render() { 
+        let list = this.props.inventoryList;
+        let productList = list.map((product, i) => <Product key={i} product={product} /> );
+
         return ( 
-            <div>
-                <p>Dashboard</p>
+            <div className="dashboard">
+                {productList}
             </div>
          );
     }

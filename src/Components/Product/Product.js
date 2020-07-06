@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
 
 class Product extends Component {
-    state = {  }
+    constructor(props) {
+        super(props);
+
+    this.state = {  }
+    }
+
+
     render() { 
+        
         return ( 
             <div>
-                <p>Product</p>
+                <div>
+                    Img here
+                    {this.props.image}</div>
+                <p> Name here
+                    {this.props.name}</p>
+                <p> Price here
+                    {this.props.price}</p>
             </div>
          );
     }

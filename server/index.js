@@ -17,6 +17,7 @@ massive({
 .catch(error => console.log(error));
 
 // Endpoints here
+app.get("/api/inventory", ctrl.get_inventory);
 
 
 app.listen(SERVER_PORT, () => console.log(`Server running on ${SERVER_PORT}`));
